@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2 class="mb-4">Fill the form to contact me.</h2>
+    <img src="\static\images\download.jpg">
+     
+    <input style="display:none">
+    <input type="password" style="display:none">
+
+    <form method="post" action="/contact/" autocomplete="off" id="contactForm">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="realNameField" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="realNameField" name="temp_name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputNumber1" class="form-label">Your Phone Number</label>
+            <input type="text" class="form-control form-control-lg" id="exampleInputNumber1" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter your email" required>
+            <div id="emailHelp" class="form-text">We’ll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputdesc1" class="form-label">Your purpose to contact me.</label>
+            <input type="text" class="form-control form-control-lg" name="desc" id="exampleInputdesc1" placeholder="" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+    window.onload = function() {
+        document.getElementById('realNameField').setAttribute('name', 'name');
+        document.getElementById('realNameField').setAttribute('autocomplete', 'new-name');
+    };
+</script>
+{% endblock body %}
+
+
+

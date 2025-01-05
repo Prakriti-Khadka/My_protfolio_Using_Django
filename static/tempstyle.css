@@ -1,0 +1,70 @@
+/* Ensure your weather app fits well within the container and aligns properly */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    margin: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Adjust width to fit your layout */
+}
+
+/* Weather app specific styling */
+.weather {
+    text-align: center;
+    padding: 10px;
+}
+
+.weather img {
+    height: 150px;
+    width: 200px;
+    border-radius: 0;
+}
+
+/* Flexbox for alignment of weather details */
+.humidity-wind {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.details img {
+    height: 60px;
+    width: 60px;
+}
+
+.search input {
+    border: 1.5px solid rgb(112, 216, 143);
+    font-size: 1rem;
+    height: 2rem;
+    width: 20rem;
+    padding-left: 0.5rem;
+    border-color: peru;
+    border-radius: 7px;
+}
+
+.search button {
+    border-color: peru;
+    margin-left: 1rem;
+    border-radius: 7px;
+    width: 85px;
+    height: 2rem;
+    font-size: larger;
+    justify-content: left;
+}
+
+.search button:hover {
+    color: white;
+    background-color: blue;
+}
+
+.search input:hover {
+    color: black;
+    background-color: plum;
+}
+
